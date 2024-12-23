@@ -32,3 +32,4 @@
 - Host a Private Event – Celebrate a special occasion, business meeting, or intimate gathering in our cozy, welcoming space.
 
 - Join Loyalty Programs – Enjoy discounts and rewards with our loyalty card or app for frequent visitors.
+
