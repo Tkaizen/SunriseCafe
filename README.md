@@ -33,3 +33,4 @@
 
 - Join Loyalty Programs – Enjoy discounts and rewards with our loyalty card or app for frequent visitors.
 
+# This project is under development for the owner is coming with other ideas 
