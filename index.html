@@ -1,38 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sunrise Cafe</title>
-    <link rel="stylesheet" href="website.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Sunrise Cafe</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunrise Cafe - Start Your Day Right</title>
+    <meta name="description" content="Sunrise Cafe - A cozy spot for great coffee, delicious food, and friendly faces to start your day right." />
+    <meta name="author" content="Boyles" />
 
-    <main>
-        <section class="content">
-            <h2>Welcome to our website!</h2>
-            <p>"Start your day right at Sunrise Cafe, where every cup of coffee is brewed with care, and every bite feels like home. Join us for a perfect morning or a cozy afternoon!"</p>
-        </section>
-    </main>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  </head>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Simple Website. All rights reserved.</p>
+  <body>
+    <nav id="navbar">
+      <div class="container">
+        <a href="#" class="logo">Sunrise <span>Cafe</span></a>
+        <div class="nav-links" id="navLinks">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <button class="order-btn">Order Online</button>
         </div>
+        <button class="mobile-toggle" id="mobileToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>Start Your Day With A <span>Perfect Cup</span></h1>
+          <p>Handcrafted coffee, delicious pastries, and a cozy atmosphere to brighten your mornings.</p>
+          <div class="btn-group">
+            <a href="#menu" class="btn primary-btn">View Our Menu</a>
+            <a href="#location" class="btn outline-btn">Find Location</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>Our Story</h2>
+            <p>
+              Sunrise Cafe started in 2010 with a simple mission: create a warm, welcoming space where the 
+              community could gather and enjoy exceptional coffee and food made with care and quality ingredients.
+            </p>
+            <p>
+              What began as a small corner coffee shop has grown into a neighborhood institution, but our values 
+              remain the same. Every cup of coffee is brewed with precision, every meal prepared with attention to detail.
+            </p>
+            
+            <div class="values">
+              <div class="value-card">
+                <div class="icon">☕</div>
+                <h3>Quality Coffee</h3>
+                <p>Ethically sourced, locally roasted beans</p>
+              </div>
+              <div class="value-card">
+                <div class="icon">👥</div>
+                <h3>Community</h3>
+                <p>A gathering space for neighbors and friends</p>
+              </div>
+              <div class="value-card">
+                <div class="icon">☀️</div>
+                <h3>Fresh Start</h3>
+                <p>Making every morning better, one cup at a time</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Inside Sunrise Cafe">
+            <div class="quote">
+              <p>"We believe the perfect cup of coffee can change your entire day."</p>
+              <p class="author">— Emma & James, Founders</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Menu</h2>
+          <p>Quality ingredients, thoughtfully prepared. Our menu changes seasonally to bring you the freshest flavors.</p>
+        </div>
+
+        <div class="menu-tabs">
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-category="breakfast">Breakfast</button>
+            <button class="tab-btn" data-category="lunch">Lunch</button>
+            <button class="tab-btn" data-category="coffee">Coffee</button>
+            <button class="tab-btn" data-category="bakery">Bakery</button>
+          </div>
+
+          <div class="tab-content">
+            <div class="menu-category active" id="breakfast">
+              <div class="menu-items">
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h3>Sunrise Special</h3>
+                    <span class="price">$12.95</span>
+                  </div>
+                  <p class="description">Two eggs any style, choice of bacon or sausage, breakfast potatoes, toast</p>
+                  <span class="popular-tag">Popular Choice</span>
+                </div>
+                
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h3>Avocado Toast</h3>
+                    <span class="price">$10.95</span>
+                  </div>
+                  <p class="description">Whole grain toast topped with mashed avocado, cherry tomatoes, microgreens</p>
+                </div>
+                
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h3>Buttermilk Pancakes</h3>
+                    <span class="price">$9.95</span>
+                  </div>
+                  <p class="description">Stack of fluffy pancakes with maple syrup and butter</p>
+                </div>
+                
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h3>Veggie Omelette</h3>
+                    <span class="price">$11.95</span>
+                  </div>
+                  <p class="description">Three egg omelette with bell peppers, spinach, mushrooms, and cheese</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Other menu categories - hidden initially -->
+            <div class="menu-category" id="lunch">
+              <!-- Lunch menu items will be populated by JavaScript -->
+            </div>
+            
+            <div class="menu-category" id="coffee">
+              <!-- Coffee menu items will be populated by JavaScript -->
+            </div>
+            
+            <div class="menu-category" id="bakery">
+              <!-- Bakery menu items will be populated by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+      <div class="container">
+        <div class="section-header">
+          <h2>Visit Us</h2>
+          <p>We're conveniently located in the heart of downtown. Stop by for your morning coffee or an afternoon treat.</p>
+        </div>
+
+        <div class="location-content">
+          <div class="map">
+            <img src="https://images.unsplash.com/photo-1550855126-475b6d855e4a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Map location">
+          </div>
+
+          <div class="location-info">
+            <div class="info-card">
+              <div class="icon">📍</div>
+              <h3>Address</h3>
+              <p>123 Sunrise Avenue</p>
+              <p>Downtown, City, 12345</p>
+              <p>Free parking available on weekends</p>
+            </div>
+            
+            <div class="info-card">
+              <div class="icon">🕒</div>
+              <h3>Hours</h3>
+              <p>Monday - Friday: 6:30 AM - 7:00 PM</p>
+              <p>Saturday: 7:00 AM - 8:00 PM</p>
+              <p>Sunday: 8:00 AM - 6:00 PM</p>
+              <p>Kitchen closes daily at 3:00 PM</p>
+            </div>
+            
+            <div class="info-card">
+              <div class="icon">📞</div>
+              <h3>Contact</h3>
+              <p>Phone: (555) 123-4567</p>
+              <p>Email: hello@sunrisecafe.com</p>
+              <p>We accept reservations for groups of 6+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Get In Touch</h2>
+          <p>Have questions or feedback? Want to book a private event? We'd love to hear from you!</p>
+        </div>
+
+        <div class="contact-form-container">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required placeholder="Your name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required placeholder="Your email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" required placeholder="How can we help you?"></textarea>
+            </div>
+            <button type="submit" class="btn primary-btn form-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <h3>Sunrise <span>Cafe</span></h3>
+            <p>A cozy spot to start your day right with great coffee, delicious food, and friendly faces.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">
+                <div class="social-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </div>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <div class="social-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </div>
+              </a>
+              <a href="#" aria-label="Twitter">
+                <div class="social-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                </div>
+              </a>
+            </div>
+          </div>
+          
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#menu">Our Menu</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#location">Location</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-newsletter">
+            <h4>Newsletter</h4>
+            <p>Subscribe for updates on seasonal menu items and special events.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email">
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>© <span id="current-year"></span> Sunrise Cafe. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
-</body>
+
+    <!-- Don't remove this script tag -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
